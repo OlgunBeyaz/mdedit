@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=mdedit
+GenericName=Markdown Editor
+Comment=Simple Markdown Editor with Live Preview
+Comment[de]=Einfacher Markdown-Editor mit Live-Vorschau
+Exec=/home/kemal/Dokumente/MD-Edit/build/mdedit
+Icon=mdedit
+Terminal=false
+Categories=Office;WordProcessor;TextEditor;
+Keywords=markdown;editor;text;preview;
+MimeType=text/markdown;text/x-markdown;
+StartupNotify=true
+StartupWMClass=mdedit
