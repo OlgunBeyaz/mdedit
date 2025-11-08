@@ -1,8 +1,16 @@
-# mdedit — einfacher Markdown-Editor (C++ / Qt)
+# mdedit - Professional Markdown Editor
 
-Kleines, schlankes Qt-Programm zum Erstellen, Öffnen, Bearbeiten und Speichern von Markdown-Dateien mit Live-Preview.
+[![License: Freeware](https://img.shields.io/badge/License-Freeware-green.svg)](https://opensource.org/licenses/MIT)
+[![Qt6](https://img.shields.io/badge/Qt-6.2+-blue.svg)](https://www.qt.io/)
+[![C++17](https://img.shields.io/badge/C++-17-blue.svg)](https://isocpp.org/)
 
-## Features
+**Professioneller Markdown-Editor mit Live-Preview, entwickelt von Kemal Akçocuk**
+
+Ein moderner, VSCode-ähnlicher Markdown-Editor mit GitHub-Style Preview, Syntax-Highlighting und vollständiger Toolbar.
+
+![mdedit Screenshot](screenshot.png)
+
+## ✨ Features
 
 ### 🎨 **Professionelle Benutzeroberfläche**
 - **VSCode-ähnlicher dunkler Editor** mit Syntax-Highlighting
@@ -10,7 +18,7 @@ Kleines, schlankes Qt-Programm zum Erstellen, Öffnen, Bearbeiten und Speichern 
 - **Geteiltes Fenster** mit anpassbarer Größe
 - **Splash Screen** beim Start mit Autoreninfo
 
-### �️ **Toolbar & Texteditor-Funktionen**
+### 🛠️ **Toolbar & Texteditor-Funktionen**
 - **Emoji-Toolbar** mit allen wichtigen Funktionen
 - **Undo/Redo** (Rückgängig/Wiederholen)
 - **Copy/Cut/Paste** (Kopieren/Ausschneiden/Einfügen)
@@ -18,7 +26,7 @@ Kleines, schlankes Qt-Programm zum Erstellen, Öffnen, Bearbeiten und Speichern 
 - **Zoom-Funktionen** (Vergrößern/Verkleinern/Reset)
 - **Zeilenumbruch** ein/ausschalten
 
-### �📝 **Editor-Features**
+### 📝 **Editor-Features**
 - **Markdown Syntax-Highlighting** (Headers, Bold, Italic, Code, Links, Listen, etc.)
 - **VSCode-ähnlicher dunkler Editor** mit professionellem Look
 - **Monospace-Font** für bessere Code-Darstellung
@@ -26,98 +34,65 @@ Kleines, schlankes Qt-Programm zum Erstellen, Öffnen, Bearbeiten und Speichern 
 - **Professionelle Scrollbalken**
 - **Tastenkürzel** für alle Standardfunktionen
 
-### 👁️ **Live-Preview**
-- **GitHub-ähnliche Darstellung**
-- **Professionelle Typografie** (System-Fonts)
-- **Syntax-Highlighting** für Code-Blöcke
-- **Responsive Tables** und Listen
-- **Styled Headers** mit Unterstrichen
+## 🚀 Installation
 
-### 💾 **Datei-Management**
-- Neues Dokument erstellen
-- Öffnen (Import) von Markdown-Dateien (*.md, *.markdown)
-- Speichern / Speichern als
-- **Smart Save** mit Bestätigungsdialogen
+### Linux (Ubuntu/Debian)
 
-### ⚡ **Tastenkürzel**
-- `Ctrl+N` - Neue Datei
-- `Ctrl+O` - Öffnen
-- `Ctrl+S` - Speichern
-- `Ctrl+Z` - Rückgängig
-- `Ctrl+Y` - Wiederholen  
-- `Ctrl+X/C/V` - Ausschneiden/Kopieren/Einfügen
-- `Ctrl+F` - Suchen
-- `Ctrl+H` - Ersetzen
-- `Ctrl+Plus/Minus` - Zoom ein/aus
-
-### ℹ️ **Weitere Features**
-- **Info-Menü** (Hilfe → Über mdedit) mit Entwicklerinfo
-- **Freeware-Status** prominent angezeigt
-- **Desktop-Integration** mit eigenem Icon
-
-## Voraussetzungen
-- Linux (auch macOS/Windows möglich)
-- Qt 6.2 oder neuer (Qt Widgets)
-- Ein C++17-kompatibler Compiler (g++)
-- pkg-config
-- ImageMagick (für Icon-Konvertierung)
-
-Build (ohne CMake)
-
-**Option 1: Mit build.sh**
 ```bash
-# im Projekt-Root
-chmod +x build.sh
+# Dependencies installieren
+sudo apt update
+sudo apt install -y git build-essential qt6-base-dev imagemagick
+
+# Repository klonen
+git clone https://github.com/kemal-akcicek/mdedit.git
+cd mdedit
+
+# Icons erstellen und bauen
+chmod +x build.sh install.sh
 ./build.sh
-./build/mdedit
+
+# System-Installation (optional)
+./install.sh
 ```
 
-**Option 2: Mit Makefile**
+### Windows
+
 ```bash
-# Dependencies prüfen
-make check-deps
+# Dependencies (Qt6 von https://www.qt.io/download installieren)
+# Git for Windows installieren
+# Visual Studio Build Tools installieren
+
+# Repository klonen
+git clone https://github.com/kemal-akcicek/mdedit.git
+cd mdedit
+
+# Mit Qt Creator öffnen oder:
+cmake -B build
+cmake --build build --config Release
+```
+
+### macOS
+
+```bash
+# Dependencies installieren
+brew install qt6 imagemagick
+
+# Repository klonen
+git clone https://github.com/kemal-akcicek/mdedit.git
+cd mdedit
 
 # Bauen
-make
-
-# Ausführen
-./build/mdedit
+chmod +x build.sh
+./build.sh
 ```
-
-**Qt6 installieren (falls noch nicht vorhanden):**
-```bash
-# Ubuntu/Debian
-sudo apt install qt6-base-dev
-
-# Fedora/RedHat
-sudo dnf install qt6-qtbase-devel
-
-# Arch Linux
-sudo pacman -S qt6-base
-```
-
-## 🎯 Technische Highlights
-
-### Qt6 Vorteile
-- **Native Markdown-Rendering** mit Qt6s verbesserter Engine
-- **Moderne C++17 APIs** für bessere Performance
-- **Erweiterte CSS-Unterstützung** für professionelles Styling
-- **Robuste Desktop-Integration**
-
-### Code-Qualität
-- **Modulare Architektur** (MainWindow, SplashScreen, MarkdownHighlighter)
-- **Qt MOC System** für Signal/Slot-Verbindungen
-- **Professionelles Error-Handling**
-- **Memory-Management** mit Qt Parent-Child System
-
-### Styling-System
-- **VSCode-inspirierte Farbschemas**
-- **GitHub-kompatible Markdown-Darstellung**
-- **Responsive Design** mit anpassbaren Splitter
-- **System-Font Integration**
 
 ## 👨‍💻 Entwickler
 **Kemal Akçocuk** - Vollständige Entwicklung in C++ mit Qt6
 - **Freeware** - Kostenlos für private und kommerzielle Nutzung
 - **Open Source Ansatz** - Einfache Build-Scripts ohne komplexe Dependencies
-- **Professionelle UI/UX** - Moderne Editor-Standards implementiert
+
+## 📄 Lizenz
+
+Diese Software ist **Freeware** und kostenlos für private und kommerzielle Nutzung.
+
+© 2025 Kemal Akçocuk - Freie Software für alle
