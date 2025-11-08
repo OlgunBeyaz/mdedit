@@ -5,13 +5,13 @@ Vielen Dank für dein Interesse an mdedit! 🎉
 ## 🚀 Wie du beitragen kannst
 
 ### 🐛 Bug Reports
-- Öffne ein [Issue](https://github.com/kemal-akcicek/mdedit/issues)
+- Öffne ein [Issue](https://github.com/OlgunBeyaz/mdedit/issues)
 - Beschreibe das Problem detailliert
 - Gib dein Betriebssystem und Qt-Version an
 - Füge Screenshots hinzu, wenn möglich
 
 ### ✨ Feature Requests  
-- Öffne ein [Issue](https://github.com/kemal-akcicek/mdedit/issues) mit dem Label "enhancement"
+- Öffne ein [Issue](https://github.com/OlgunBeyaz/mdedit/issues) mit dem Label "enhancement"
 - Erkläre den Use Case
 - Beschreibe die gewünschte Lösung
 
@@ -33,7 +33,7 @@ Vielen Dank für dein Interesse an mdedit! 🎉
 
 ### Linux/macOS
 ```bash
-git clone https://github.com/kemal-akcicek/mdedit.git
+git clone https://github.com/OlgunBeyaz/mdedit.git
 cd mdedit
 sudo apt install qt6-base-dev  # Ubuntu/Debian
 ./build.sh
@@ -41,7 +41,7 @@ sudo apt install qt6-base-dev  # Ubuntu/Debian
 
 ### Windows
 ```cmd
-git clone https://github.com/kemal-akcicek/mdedit.git
+git clone https://github.com/OlgunBeyaz/mdedit.git
 cd mdedit
 # Install Qt6 from qt.io
 generate_pro.bat

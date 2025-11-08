@@ -44,7 +44,7 @@ sudo apt update
 sudo apt install -y git build-essential qt6-base-dev imagemagick
 
 # Repository klonen
-git clone https://github.com/kemal-akcicek/mdedit.git
+git clone https://github.com/OlgunBeyaz/mdedit.git
 cd mdedit
 
 # Icons erstellen und bauen
@@ -63,7 +63,7 @@ chmod +x build.sh install.sh
 # Visual Studio Build Tools installieren
 
 # Repository klonen
-git clone https://github.com/kemal-akcicek/mdedit.git
+git clone https://github.com/OlgunBeyaz/mdedit.git
 cd mdedit
 
 # Mit Qt Creator öffnen oder:
@@ -78,7 +78,7 @@ cmake --build build --config Release
 brew install qt6 imagemagick
 
 # Repository klonen
-git clone https://github.com/kemal-akcicek/mdedit.git
+git clone https://github.com/OlgunBeyaz/mdedit.git
 cd mdedit
 
 # Bauen
