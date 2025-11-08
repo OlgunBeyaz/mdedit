@@ -1,0 +1,76 @@
+name: Build mdedit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Qt6
+      run: |
+        sudo apt update
+        sudo apt install -y qt6-base-dev qt6-base-dev-tools build-essential
+        
+    - name: Build mdedit
+      run: |
+        chmod +x build.sh
+        ./build.sh
+        
+    - name: Test run
+      run: |
+        # Quick test that binary was created
+        ls -la build/mdedit
+        file build/mdedit
+
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Qt6
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: '6.5.*'
+        
+    - name: Build mdedit
+      run: |
+        mkdir build
+        cd build
+        cmake .. 
+        cmake --build . --config Release
+        
+    - name: Upload Windows artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: mdedit-windows
+        path: build/Release/mdedit.exe
+
+  build-macos:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Qt6
+      run: |
+        brew install qt6
+        
+    - name: Build mdedit
+      run: |
+        export PATH="/usr/local/opt/qt6/bin:$PATH"
+        chmod +x build.sh
+        ./build.sh
+        
+    - name: Upload macOS artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: mdedit-macos
+        path: build/mdedit
