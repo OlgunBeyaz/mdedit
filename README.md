@@ -1,6 +1,10 @@
-# mdedit - Professional Markdown Editor
+# mdedit — Markdown Editor with Live Preview
 
-[![License: Freeware](https://img.shields.io/badge/License-Freeware-green.svg)](https://opensource.org/licenses/MIT)
+A desktop Markdown editor built with **C++17 and Qt 6**, featuring syntax highlighting, a split-pane editor, and GitHub-style live preview.
+
+[Features](#-features) · [Installation](#-installation) · [Report an issue](https://github.com/OlgunBeyaz/mdedit/issues)
+
+![License: Freeware](https://img.shields.io/badge/License-Freeware-green.svg)
 [![Qt6](https://img.shields.io/badge/Qt-6.2+-blue.svg)](https://www.qt.io/)
 [![C++17](https://img.shields.io/badge/C++-17-blue.svg)](https://isocpp.org/)
 
@@ -89,10 +93,15 @@ chmod +x build.sh
 ## 👨‍💻 Entwickler
 **Kemal Akçocuk** - Vollständige Entwicklung in C++ mit Qt6
 - **Freeware** - Kostenlos für private und kommerzielle Nutzung
-- **Open Source Ansatz** - Einfache Build-Scripts ohne komplexe Dependencies
+- **Einsehbarer Quellcode** - Einfache Build-Scripts ohne komplexe Dependencies
+
+## Feedback
+
+Found an issue? Please [create a GitHub issue](https://github.com/OlgunBeyaz/mdedit/issues) with your operating system, reproduction steps, and relevant logs.
 
 ## 📄 Lizenz
 
 Diese Software ist **Freeware** und kostenlos für private und kommerzielle Nutzung.
 
 © 2025 Kemal Akçocuk - Freie Software für alle
+> **Licensing note:** Freeware does not automatically mean an open-source license. Check the repository's license terms before redistributing or modifying this project.
